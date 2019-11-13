@@ -1,0 +1,33 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+    var sayHello = "Hello World";
+    string[] arr = {"Windows", "IOS", "Linux"};
+    Random rnd = new Random();
+    int randomNr = rnd.Next(1,21);
+    
+}
+
+<div class="text-center" style="background-color:white;">
+    <hl>@sayHello</hl>
+    <p>@DateTime.Now</p>
+    @foreach(var item in Model.Food)
+    {
+        <li>@item</li>
+    }
+    <p>@randomNr</p>
+    @if(randomNr > 10)
+    {
+        <p>Ja</p>
+    }
+    else
+    {
+        <p>nej</p>
+    }
+    <p>Learn about <a href="https://images.hdsydsvenskan.se/980x588/IQNWo8HvGS5b8HwFbiAP8wbLctY.jpg">building Web apps with ASP.NET Core</a>.</p>
+    <img src="img/red_hawk.jpg" alt="Hawk" width="600" height="658">  
+    <p style="color:blue;">Waddup brewski</p>
+</div>
+<div id="header">
+    <p>yobro</p>
